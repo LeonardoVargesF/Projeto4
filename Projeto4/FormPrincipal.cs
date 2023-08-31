@@ -28,5 +28,19 @@ namespace Projeto4
                 e.Cancel = true;
             }
         }
+
+        private void cadastroDeProfessoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormProfessor formProfessor = new FormProfessor();
+            formProfessor.MdiParent = this;
+            formProfessor.Show();
+        }
+
+        private void cadastroDeCursosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCurso formCurso = new FormCurso();
+            formCurso.MdiParent = this;
+            formCurso.Show();
+        }
     }
 }
