@@ -6,7 +6,13 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>ifsp_icon.ico</ApplicationIcon>
+    <UseWPF>False</UseWPF>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="ifsp_icon.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MySql.Data" Version="8.1.0" />
