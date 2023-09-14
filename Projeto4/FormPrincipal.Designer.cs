@@ -72,7 +72,7 @@
             this.cadastroDeProfessoresToolStripMenuItem.Name = "cadastroDeProfessoresToolStripMenuItem";
             this.cadastroDeProfessoresToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.cadastroDeProfessoresToolStripMenuItem.Text = "Cadastro de Professores";
-            this.cadastroDeProfessoresToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeProfessoresToolStripMenuItem_Click_1);
+            this.cadastroDeProfessoresToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeProfessoresToolStripMenuItem_Click);
             // 
             // cadastroDeCursosToolStripMenuItem
             // 

@@ -162,7 +162,6 @@
             this.cboAgrupamento.IntegralHeight = false;
             this.cboAgrupamento.ItemHeight = 43;
             this.cboAgrupamento.Items.AddRange(new object[] {
-            "",
             "Nenhum",
             "Cidade",
             "Estado"});
@@ -193,6 +192,7 @@
             this.btnImprimir.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnImprimir.UseAccentColor = false;
             this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnVisualizar
             // 
@@ -213,6 +213,7 @@
             this.btnVisualizar.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnVisualizar.UseAccentColor = false;
             this.btnVisualizar.UseVisualStyleBackColor = true;
+            this.btnVisualizar.Click += new System.EventHandler(this.btnVisualizar_Click);
             // 
             // groupBox3
             // 

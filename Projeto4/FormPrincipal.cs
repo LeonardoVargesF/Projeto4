@@ -29,13 +29,6 @@ namespace Projeto4
             }
         }
 
-        private void cadastroDeProfessoresToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            FormProfessor formProfessor = new FormProfessor();
-            formProfessor.MdiParent = this;
-            formProfessor.Show();
-        }
-
         private void cadastroDeCursosToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             FormCurso formCurso = new FormCurso();
@@ -48,6 +41,13 @@ namespace Projeto4
             FormRelatorioAluno formRelatorioAluno = new FormRelatorioAluno();
             formRelatorioAluno.MdiParent = this;
             formRelatorioAluno.Show();
+        }
+
+        private void cadastroDeProfessoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormProfessor formProfessor = new FormProfessor();
+            formProfessor.MdiParent = this;
+            formProfessor.Show();
         }
     }
 }
