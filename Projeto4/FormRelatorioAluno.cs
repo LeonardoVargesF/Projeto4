@@ -6,6 +6,7 @@ using Spire.Pdf.Tables;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing.Configuration;
+using System.Drawing.Printing;
 using System.Windows.Forms;
 
 namespace Projeto4
@@ -27,6 +28,7 @@ namespace Projeto4
             }
         }
 
+        private PdfDocument doc = new PdfDocument();
         private void MontaRelatorio()
         {
             //consulta do banco de dados
@@ -48,7 +50,6 @@ namespace Projeto4
             var dt = new DataTable();
             sqlAd.Fill(dt);
             //inicio geração do pdf
-            PdfDocument doc = new PdfDocument();
             PdfSection sec = doc.Sections.Add();
             sec.PageSettings.Width = PdfPageSize.A4.Width;
             PdfPageBase page = sec.Pages.Add();
@@ -87,7 +88,10 @@ namespace Projeto4
         private void btnImprimir_Click(object sender, EventArgs e)
         {
             MontaRelatorio();
-            
+
+            doc.LoadFromFile("RelatorioAlunos.pdf");
+            doc.PrintSettings.PrinterName = cboImpressora.Text;
+            doc.Print();
         }
 
         private void btnVisualizar_Click(object sender, EventArgs e)
