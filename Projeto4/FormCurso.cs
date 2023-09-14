@@ -150,7 +150,7 @@ namespace Projeto4
 
 
 
-        private void btnExcluir_Click(object sender, EventArgs e)
+        private void btnExcluir_Click_1(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
@@ -167,7 +167,7 @@ namespace Projeto4
             }
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
+        private void btnSalvar_Click_1(object sender, EventArgs e)
         {
             if (ValidarFormulario())
             {
@@ -176,19 +176,19 @@ namespace Projeto4
             }
         }
 
-        private void tabPage2_Enter(object sender, EventArgs e)
+        private void tabPage2_Enter_1(object sender, EventArgs e)
         {
             CarregaGrid();
         }
 
-        private void btnNovo_Click(object sender, EventArgs e)
+        private void btnNovo_Click_1(object sender, EventArgs e)
         {
             LimpaCampos();
             materialTabControl1.SelectedIndex = 0;
             txtNome.Focus();
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void btnCancelar_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show("Deseja realmente cancelar?", "IFSP",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -198,7 +198,12 @@ namespace Projeto4
             }
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void btnEditar_Click_1(object sender, EventArgs e)
+        {
+            Editar();
+        }
+
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
             Editar();
         }
