@@ -47,9 +47,9 @@ namespace Projeto4
             var sqlAd = new MySqlDataAdapter();
             sqlAd.SelectCommand = new MySqlCommand(sql, con);
             if (cboTipoCurso.Text != "")
-                sqlAd.SelectCommand.Parameters.AddWithValue("@nome", txtNomeCurso.Text);
-            if (txtNomeCurso.Text != "")
                 sqlAd.SelectCommand.Parameters.AddWithValue("@tipo", cboTipoCurso.Text);
+            if (txtNomeCurso.Text != "")
+                sqlAd.SelectCommand.Parameters.AddWithValue("@nome", txtNomeCurso.Text);
 
             doc = new PdfDocument();
 
