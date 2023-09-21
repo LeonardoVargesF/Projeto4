@@ -84,7 +84,7 @@ namespace Projeto4
             }
 
 
-            if (!DateTime.TryParse(txtDataCriacao.Text, out DateTime _))
+            if (string.IsNullOrEmpty(txtDataCriacao.Text))
             {
                 MessageBox.Show("Data de Criação Obrigatoria", "IFSP",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);

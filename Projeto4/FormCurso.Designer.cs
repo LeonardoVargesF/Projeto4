@@ -196,11 +196,11 @@
             this.txtDataCriacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtDataCriacao.HidePromptOnLeave = false;
             this.txtDataCriacao.HideSelection = true;
-            this.txtDataCriacao.Hint = "Data Criação";
+            this.txtDataCriacao.Hint = "Ano Criação";
             this.txtDataCriacao.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txtDataCriacao.LeadingIcon = null;
             this.txtDataCriacao.Location = new System.Drawing.Point(6, 62);
-            this.txtDataCriacao.Mask = "99/99/9999";
+            this.txtDataCriacao.Mask = "";
             this.txtDataCriacao.MaxLength = 32767;
             this.txtDataCriacao.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             this.txtDataCriacao.Name = "txtDataCriacao";
@@ -220,7 +220,6 @@
             this.txtDataCriacao.SkipLiterals = true;
             this.txtDataCriacao.TabIndex = 2;
             this.txtDataCriacao.TabStop = false;
-            this.txtDataCriacao.Text = "  /  /";
             this.txtDataCriacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtDataCriacao.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txtDataCriacao.TrailingIcon = null;
