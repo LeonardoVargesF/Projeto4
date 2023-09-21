@@ -19,6 +19,7 @@ namespace Projeto4
     public partial class FormRelatorioProfessor : MaterialForm
     {
         string cs = @"server=127.0.0.1;" + "uid=root;" + "pwd=;" + "database=academico";
+        private PdfDocument doc;
         public FormRelatorioProfessor()
         {
             InitializeComponent();
@@ -31,7 +32,7 @@ namespace Projeto4
                 cboImpressora.Items.Add(printer);
             }
         }
-        private PdfDocument doc = new PdfDocument();
+        
         private void MontaRelatorio()
         {
             //consulta do banco de dados
@@ -54,10 +55,12 @@ namespace Projeto4
                 sqlAd.SelectCommand.Parameters.AddWithValue("@estado", cboEstado.Text);
             if (txtCidade.Text != "")
                 sqlAd.SelectCommand.Parameters.AddWithValue("@cidade", txtCidade.Text);
-            if (cboEstado.Text != "")
+            if (cboTitulacao.Text != "")
                 sqlAd.SelectCommand.Parameters.AddWithValue("@titulacao", cboTitulacao.Text);
-            if (txtCidade.Text != "")
+            if (txtAreaFormacao.Text != "")
                 sqlAd.SelectCommand.Parameters.AddWithValue("@area_formacao", txtAreaFormacao.Text);
+
+            doc = new PdfDocument();
 
             var dt = new DataTable();
             sqlAd.Fill(dt);
