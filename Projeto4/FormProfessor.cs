@@ -15,14 +15,6 @@ namespace Projeto4
             InitializeComponent();
         }
 
-        private void btnSalvar_Click_1(object sender, EventArgs e)
-        {
-            if (ValidarFormulario())
-            {
-                Salvar();
-                materialTabControl1.SelectedIndex = 1;
-            }
-        }
 
         private bool ValidarFormulario()
         {
@@ -212,19 +204,38 @@ namespace Projeto4
             }
         }
 
-        private void tabPage2_Enter_1(object sender, EventArgs e)
+        private void btnSalvar_Click(object sender, EventArgs e)
         {
-            CarregaGrid();
+            if (ValidarFormulario())
+            {
+                Salvar();
+                materialTabControl1.SelectedIndex = 1;
+            }
         }
 
-        private void txtNovo_Click_1(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja realmente cancelar?", "IFSP",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                LimpaCampos();
+                materialTabControl1.SelectedIndex = 1;
+            }
+        }
+
+        private void txtNovo_Click(object sender, EventArgs e)
         {
             LimpaCampos();
             materialTabControl1.SelectedIndex = 0;
             txtMatricula.Focus();
         }
 
-        private void txtExcluir_Click_1(object sender, EventArgs e)
+        private void txtEditar_Click(object sender, EventArgs e)
+        {
+            Editar();
+        }
+
+        private void txtExcluir_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
@@ -241,20 +252,9 @@ namespace Projeto4
             }
         }
 
-        private void txtEditar_Click_1(object sender, EventArgs e)
+        private void tabPage2_Enter(object sender, EventArgs e)
         {
-            Editar();
+            CarregaGrid();
         }
-
-        private void btnCancelar_Click_1(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Deseja realmente cancelar?", "IFSP",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                LimpaCampos();
-                materialTabControl1.SelectedIndex = 1;
-            }
-        }
-
     }
 }
